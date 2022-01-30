@@ -5,4 +5,4 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 31080
-CMD [ "node", "server.js" ]
+CMD [ "npm", "start" ]

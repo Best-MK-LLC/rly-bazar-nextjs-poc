@@ -1,0 +1,16 @@
+{
+  "env": {
+    "NEXT_PUBLIC_REST_API_ENDPOINT": "Put your api endpoint here",
+    "NEXT_PUBLIC_SITE_URL": "Put your site url here",
+    "NEXT_PUBLIC_STRIPE_PUBLIC_KEY": "Put your stripe public key here",
+    "NEXT_PUBLIC_GOOGLE_API_KEY": "Put your google api key here"
+  },
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_REST_API_ENDPOINT": "Put your api endpoint here",
+      "NEXT_PUBLIC_SITE_URL": "Put your site url here",
+      "NEXT_PUBLIC_STRIPE_PUBLIC_KEY": "Put your stripe public key here",
+      "NEXT_PUBLIC_GOOGLE_API_KEY": "Put your google api key here"
+    }
+  }
+}
