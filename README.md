@@ -1,5 +1,9 @@
 # rly-bazar-nextjs-poc
 
+Create a .env.local file from .env.local.template
+
+You can use the defaults
+
 ### Getting Started
 
 ####Yarn
