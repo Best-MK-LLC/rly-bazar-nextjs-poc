@@ -1,4 +1,5 @@
 export const API_ENDPOINTS = {
+  META_LOGIN: '/meta/login',
   LOGIN: '/login',
   REGISTER: '/register',
   LOGOUT: '/logout',

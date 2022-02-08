@@ -14,6 +14,7 @@ import BannerCard from '@components/cards/banner-card';
 import { bundleDataTwo as bundle } from '@framework/static/bundle';
 import { GetStaticProps } from 'next';
 import Seo from '@components/seo/seo';
+import MetaLogin from '@components/meta-login/MetaLogin';
 import { QueryClient } from 'react-query';
 import { dehydrate } from 'react-query/hydration';
 import { API_ENDPOINTS } from '@framework/utils/api-endpoints';
@@ -22,37 +23,45 @@ import { fetchBestSellerGroceryProducts } from '@framework/product/get-all-best-
 import { fetchPopularProducts } from '@framework/product/get-all-popular-products';
 import { LIMITS } from '@framework/utils/limits';
 
+const handleLoggedIn = () => {
+  console.log('[on logged in] should set state.. etc.,');
+  // localStorage.setItem(LS_KEY, JSON.stringify(auth));
+  // setState({ auth });
+};
+
 export default function Home() {
   return (
     <>
+      <h1>Meta login below...</h1>
+      <MetaLogin onLoggedIn={handleLoggedIn} />
       <Seo
         title="Grocery & Food Store React Template"
         description="Fastest E-commerce template built with React, NextJS, TypeScript, React-Query and Tailwind CSS."
         path="/"
       />
-      <HeroBannerCard
-        banner={heroBanner}
-        className="hero-banner-six min-h-[400px] md:min-h-[460px] lg:min-h-[500px] xl:min-h-[650px] py-20 py:pt-24 mb-5 2xl:bg-center"
-      />
-      <Container>
-        <BundleGrid
-          className="mb-12 lg:mb-14 xl:mb-16 2xl:mb-20"
-          data={bundle}
-        />
-        <CategoryGridBlock />
-        <BestSellerGroceryProductFeed />
-        <BannerCard
-          banner={banner}
-          className="mb-12 lg:mb-14 xl:pb-3"
-          effectActive={false}
-        />
-        <PopularProductFeed />
-      </Container>
-      <CollectionGrid
-        headingPosition="center"
-        className="xl:pt-2 2xl:pt-4 3xl:pt-6 pb-1 lg:pb-0 mb-12 lg:mb-14 xl:mb-16 2xl:mb-20"
-      />
-      <DownloadApps />
+      {/*<HeroBannerCard*/}
+      {/*  banner={heroBanner}*/}
+      {/*  className="hero-banner-six min-h-[400px] md:min-h-[460px] lg:min-h-[500px] xl:min-h-[650px] py-20 py:pt-24 mb-5 2xl:bg-center"*/}
+      {/*/>*/}
+      {/*<Container>*/}
+      {/*  <BundleGrid*/}
+      {/*    className="mb-12 lg:mb-14 xl:mb-16 2xl:mb-20"*/}
+      {/*    data={bundle}*/}
+      {/*  />*/}
+      {/*  <CategoryGridBlock />*/}
+      {/*  <BestSellerGroceryProductFeed />*/}
+      {/*  <BannerCard*/}
+      {/*    banner={banner}*/}
+      {/*    className="mb-12 lg:mb-14 xl:pb-3"*/}
+      {/*    effectActive={false}*/}
+      {/*  />*/}
+      {/*  <PopularProductFeed />*/}
+      {/*</Container>*/}
+      {/*<CollectionGrid*/}
+      {/*  headingPosition="center"*/}
+      {/*  className="xl:pt-2 2xl:pt-4 3xl:pt-6 pb-1 lg:pb-0 mb-12 lg:mb-14 xl:mb-16 2xl:mb-20"*/}
+      {/*/>*/}
+      {/*<DownloadApps />*/}
     </>
   );
 }
