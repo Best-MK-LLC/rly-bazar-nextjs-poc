@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Web3 from 'web3';
+import Button from '@components/ui/button';
 
 export interface Auth {
   accessToken: string;
@@ -111,16 +112,9 @@ const MetaLogin = ({ onLoggedIn }: Props): JSX.Element => {
 
   return (
     <div>
-      <p>
-        Please select your login method.
-        <br />
-        For the purpose of this demo, only MetaMask login is implemented.
-      </p>
-      <button onClick={handleClick}>
+      <Button className="mb-12" onClick={handleClick}>
         {loading ? 'Loading...' : 'Login with MetaMask'}
-      </button>
-      <button disabled>Login with Facebook</button>
-      <button disabled>Login with Email</button>
+      </Button>
     </div>
   );
 };
